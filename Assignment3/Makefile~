@@ -1,0 +1,12 @@
+.phony all:
+all: diskops
+
+diskops:
+	gcc -Wall diskinfo.c -o -lm diskinfo
+	gcc -Wall disklist.c -o -lm disklist
+	gcc -Wall diskget.c -o -lm diskget
+	gcc -Wall diskput.c -o -lm diskput
+
+.PHONY clean:
+clean:
+	-rm -rf *.o *.exe
